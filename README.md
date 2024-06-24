@@ -11,5 +11,8 @@ A Plagiarism checker that visualizes the plagiarism content and checks text simi
 # Note 📝
 kindly start with '127.0.0.1:8000/main/' to access the signUp page of the application .
 
+# Contributing 💪
+Feel free to open issues or submit pull requests. Contributions are welcome!
+
 
 
