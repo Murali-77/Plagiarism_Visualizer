@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp Page</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+
+</head>
+<body>
+    <h2 class="title">Welcome ! 🙌🏻</h2>
+
+    <form method="post">
+
+        <div class="signup-box">
+            {% csrf_token %}
+            <label for="username" class="text">Username : </label>
+            <input type="text" name="username" class="ip-box" required> <br>
+
+            <label for="password" class="text">Password : </label>
+            <input type="password" name="password" class="ip-box" required> <br>
+
+            <label for="email" class="text">Email : </label>
+            <input type="email" name="email" class="ip-box" required> <br>
+
+            <button type="submit" class="btn">Sign Up</button>
+        </div>
+    </form>
+
+</body>
+</html>

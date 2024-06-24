@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plagiarism_Visualizer</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1 class="title">Plagiarism Visualizer 📈</h1>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        <div class="ip-box">
+            <p class="ip-label">Enter text one :</p>
+            <textarea name="text1" rows="5" cols="50" class="text"></textarea><br><br>
+            <p class="ip-label">Enter text two :</p>
+            <textarea name="text2" rows="5" cols="50" class="text"></textarea><br><br>
+
+            <p class="ip-label">Enter E-mail :</p>
+            <input type="email" name="email" placeholder="Enter you Email" class="mail-box">
+        </div>
+
+        <div class="btn-box">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+
+    </form>
+
+    <div class="op-box">
+        {% if message %}
+            <h2 align="center">👇🏻Plagiarism percentage👇🏻</h2>
+            <div class="message"><h2>{{ message }}</h2></div>
+        {% endif %}
+        {% if plot_url %}
+            <h2 align="center">👇🏻Similarity👇🏻</h2>
+            <div class="message"><h2>{{ similarity }}</h2></div>
+            <img src="data:image/png;base64,{{ plot_url }}" class="img"/>
+        {% endif %}
+
+        {% if email_sent %}
+            <h3 align="center" style="background-color: #A6E698; padding: 1rem; color: #344E2E; border-radius: 10px; max-wid" class="email-res">Response has been sent as email to the user !</h3>
+        {% endif %}
+
+        <br>
+        <p class="logout-btn"><a href="{% url 'logout' %}">Logout</a></p>
+        <br>
+    </div>
+</body>
+</html>

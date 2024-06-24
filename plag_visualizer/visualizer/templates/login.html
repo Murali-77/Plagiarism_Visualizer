@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Django App</title>
+
+    {% load static %}
+<!--    <link rel='stylesheet" href="/static/login.css?{% now "U" %}' >-->
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+
+    <h1 class="title">Login🚪 </h1>
+
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="login-box">
+            <label for="username" class="ip-label">Username : </label>
+            <input type="text" name="username" id="username" class="ip-box" required> <br><br>
+            <label for="password" class="ip-label">Password : </label>
+            <input type="password" name="password" id="password" class="ip-box" required> <br><br>
+            <button type="submit" class="btn">Login</button>
+
+            <hr><hr>
+
+            <div class="signup-section">
+                <p>Don't have an account.</p> <br>
+                <a href="{% url 'signup' %}">SignUP</a>
+            </div>
+
+        </div>
+    </form>
+
+    {% if error_message %}
+        <p class="error-message">{{ error_message }}</p>
+    {% endif %}
+
+</body>
+</html>

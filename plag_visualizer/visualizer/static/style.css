@@ -1,0 +1,100 @@
+body{
+    min-height : 220vh;
+    padding : 0;
+    margin : 0;
+}
+
+.title{
+    font-size : 2.5rem;
+    text-align : center;
+    background-color : #ACC8E5;
+    color : #112A46;
+    padding-bottom : 1rem;
+    padding-top : 0.5rem;
+    border-radius : 20px;
+}
+
+.ip-label{
+    font-size : 1.3rem;
+    font-style : bold;
+}
+
+.ip-box{
+    display : flex;
+    justify-content : center;
+    gap : 2rem;
+    flex-wrap : wrap;
+    margin : 4rem;
+}
+
+.text{
+    border : 2px solid black;
+    border-radius : 15px;
+    font-family : Georgia, serif;
+    padding : 1rem;
+}
+
+.btn{
+    background-color : #82B3E7;
+    width : 15rem;
+    height : 3rem;
+    font-size : 1.3rem;
+    font-family: Georgia, serif;
+    border : 2px solid black;
+    border-radius : 10px;
+    color : #121C27;
+    box-shadow : 10px 5px 5px gray;
+}
+
+.btn-box{
+    display : flex;
+    justify-content : center;
+    flex-wrap : wrap;
+    margin-top : 1rem;
+    margin-bottom : 4rem;
+}
+
+.op-box{
+    border : 2px solid black;
+    border-radius : 10px;
+    padding : 0.5rem;
+}
+
+.message{
+    background-color : pink;
+    color : #5F071C;
+    font-style : bold;
+    text-align : center;
+    min-width : 5rem;
+    min-height : 2rem;
+}
+
+.img{
+    margin-left : 25%;
+}
+
+.logout-btn{
+    text-decoration : none;
+    text-align : center;
+}
+
+.logout-btn a{
+    text-decoration : none;
+    background-color : #82B3E7;
+    color : #121C27;
+    width : 50rem;
+    height : 2rem;
+    font-size : 1.3rem;
+    font-family: Georgia, serif;
+    border : 2px solid black;
+    border-radius : 10px;
+    padding : 0.5rem;
+    padding-left : 2.5rem;
+    padding-right : 2.5rem;
+}
+
+.logout-btn a:hover{
+    color : #5F071C;
+    background-color : #FBD0DA;
+    transition : 1s;
+}
